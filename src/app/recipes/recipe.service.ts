@@ -12,7 +12,7 @@ export class RecipeService {
         new Recipe(
             'A Test Recipe', 
             'This is simply a test', 
-            'https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fmini-salami-pizza-on-a-dark-wooden-background-top-view-picture-id639963606%3Fk%3D6%26m%3D639963606%26s%3D612x612%26w%3D0%26h%3DNliKTAtYAszsCgGrB3-Lm1cZc9PlXh_paQGMgltAdzA%3D&sp=1616178631T3bb0ad6899c37d70eadd96460258554dacc31f63714c42924dce755503167217',
+            'https://images.unsplash.com/photo-1534790566855-4cb788d389ec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
             [
                 new Ingredient('Meat', 4),
                 new Ingredient('French Fries', 2)
@@ -20,7 +20,7 @@ export class RecipeService {
         new Recipe(
             'Another Test Recipe', 
             'This is another test', 
-            'https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fmini-salami-pizza-on-a-dark-wooden-background-top-view-picture-id639963606%3Fk%3D6%26m%3D639963606%26s%3D612x612%26w%3D0%26h%3DNliKTAtYAszsCgGrB3-Lm1cZc9PlXh_paQGMgltAdzA%3D&sp=1616178631T3bb0ad6899c37d70eadd96460258554dacc31f63714c42924dce755503167217',
+            'https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80',
             [
                 new Ingredient('Pepperoni', 1),
                 new Ingredient('Olives', 2)
@@ -33,6 +33,10 @@ export class RecipeService {
         //this method returns a COPY of recipes
         return this.recipes.slice();
     }  
+
+    getRecipe(index: number) {
+        return this.recipes[index];
+    }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
         this.slService.addIngredients(ingredients);
